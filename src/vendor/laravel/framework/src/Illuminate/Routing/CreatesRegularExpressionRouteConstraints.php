@@ -4,8 +4,6 @@ namespace Illuminate\Routing;
 
 use Illuminate\Support\Arr;
 
-use function Illuminate\Support\enum_value;
-
 trait CreatesRegularExpressionRouteConstraints
 {
     /**
@@ -72,12 +70,7 @@ trait CreatesRegularExpressionRouteConstraints
      */
     public function whereIn($parameters, array $values)
     {
-        return $this->assignExpressionToParameters(
-            $parameters,
-            collect($values)
-                ->map(fn ($value) => enum_value($value))
-                ->implode('|')
-        );
+        return $this->assignExpressionToParameters($parameters, implode('|', $values));
     }
 
     /**

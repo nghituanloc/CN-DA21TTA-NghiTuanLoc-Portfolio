@@ -12,7 +12,7 @@ return new class extends Migration {
     {
         Schema::create('tochuccapchungchi', function (Blueprint $table) {
             $table->id('matochuc');
-            $table->string('tentochuc', 50)->nullable();
+            $table->string('tentochuc', 255)->nullable();
             $table->timestamps();
         });
     }
