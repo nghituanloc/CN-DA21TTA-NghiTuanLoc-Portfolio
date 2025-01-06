@@ -16,7 +16,8 @@ return [
 
     'allowed_methods' => ['*'], // Cho phép tất cả các phương thức HTTP (GET, POST, PUT, DELETE, ...)
 
-    'allowed_origins' => ['http://localhost:3000','http://192.168.0.108:3000'], // Địa chỉ frontend React
+    // 'allowed_origins' => ['http://localhost:3000','http://192.168.0.108:3000','https://63ac-27-3-193-44.ngrok-free.app/'], // Địa chỉ frontend React
+    'allowed_origins' => ['*'], // Địa chỉ frontend React
 
     'allowed_origins_patterns' => [], // Các mẫu địa chỉ (nếu cần thiết)
 

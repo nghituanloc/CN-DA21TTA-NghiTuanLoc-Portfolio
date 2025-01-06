@@ -133,7 +133,8 @@ public function update(Request $request, $id)
         // Trả về thông tin người dùng (hoặc token nếu sử dụng Sanctum/Passport)
         return response()->json([
             'message' => 'Đăng nhập thành công!',
-            'user' => $user,
+            'user' => $user->makeHidden('matkhau')
+
         ]);
     }
 }
